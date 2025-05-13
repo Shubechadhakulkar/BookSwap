@@ -1,0 +1,293 @@
+.latest-products-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  max-width: 1200px;       
+  margin: 0 auto;           
+  padding: 10px 10px; 
+  align-items: stretch; }
+
+.sell-guide-section {
+  background: #fdca93;
+  padding: 60px 20px;
+  text-align: center;
+
+  .sell-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .sell-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .sell-steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .sell-step-card {
+      background: #ffffff;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .step-label {
+        font-weight: bold;
+        font-size: 14px;
+        color: #ffffff;
+        background-color: #f48631;
+        padding: 5px 12px;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      .step-image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #9d432a;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #1a1a1a;
+      }
+
+      p {
+        font-size: 14px;
+        color: #f86b6b;
+      }
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: #f1a67d;
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .sell-steps-container {
+      flex-direction: column;
+
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+  @media (max-width: 768px) {
+    .sell-steps-container {
+      flex-direction: column;
+
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+.buy-guide-section {
+  background: #fff0e6; // slightly different light peach for visual separation
+  padding: 60px 20px;
+  text-align: center;
+
+  .buy-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .buy-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 40px;
+  }
+
+  .buy-steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .buy-step-card {
+      background: #ffffff;
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(255, 182, 138, 0.3);
+      width: 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      .step-label {
+        font-weight: bold;
+        font-size: 14px;
+        color: #fff;
+        background-color: #f4a261;
+        padding: 5px 12px;
+        border-radius: 50px;
+        display: inline-block;
+        margin-bottom: 15px;
+      }
+
+      .step-image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 15px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid #f4a261;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #1a1a1a;
+      }
+
+      p {
+        font-size: 14px;
+        color: #555;
+      }
+    }
+
+    .arrow {
+      font-size: 2rem;
+      color: #f4a261;
+      align-self: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .buy-steps-container {
+      flex-direction: column;
+
+      .arrow {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+
+.choose-action-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.action-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.action-circle:hover {
+  transform: scale(1.05);
+}
+
+.action-circle img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.action-circle span {
+  font-weight: 600;
+  color: #333;
+}
+
+.or-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+}
+
+
+
+/* Tablets (Portrait) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .book-grid {
+    gap: 16px; 
+       // Smaller gap for tablets
+  }
+}
+
+/* Phones (Landscape) */
+@media (max-width: 768px) and (min-width: 480px) {
+  .book-grid {
+    gap: 12px;          // Smaller gap for phones
+    padding: 0 20px;    // Adjust side padding for better spacing
+  }
+}
+
+/* Smartphones (Portrait) */
+@media (max-width: 480px) {
+  .book-grid {
+    gap: 10px;          // Smallest gap for smaller screens
+    padding: 0 15px;    // Adjust side padding to avoid edge overflow
+  }
+}

@@ -1,1 +1,99 @@
-<p>sell works!</p>
+<div class="sell-form-wrapper">
+  <form [formGroup]="sellForm" (ngSubmit)="submitForm()" class="sell-form">
+    <h3>Book Details:</h3>
+
+    <label>Ad Title</label>
+    <input formControlName="adTitle" placeholder="Enter your ad title" />
+
+    <label>Book Details</label>
+    <div class="radio-group">
+      <label>
+        <input
+          type="radio"
+          formControlName="bookInputMode"
+          value="manual"
+          (change)="useISBN = false"
+        />
+        Enter manually
+      </label>
+      <label>
+        <input
+          type="radio"
+          formControlName="bookInputMode"
+          value="isbn"
+          (change)="useISBN = true"
+        />
+        Use ISBN
+      </label>
+    </div>
+
+    <div *ngIf="useISBN">
+      <label>ISBN</label>
+      <input formControlName="isbn" placeholder="Enter 13 digit ISBN number" />
+      <button type="button" (click)="onISBNFetch()">Get Book Details</button>
+    </div>
+
+    <label>Book Type</label>
+    <select formControlName="bookType">
+      <option value="">Select type</option>
+      <option value="school">School</option>
+      <option value="college">College</option>
+      <option value="fiction">Fiction</option>
+      <option value="non-fiction">Non-Fiction</option>
+    </select>
+
+    <label>Book Condition</label>
+    <div class="radio-group">
+      <label
+        ><input
+          type="radio"
+          formControlName="bookCondition"
+          value="Excellent"
+        />
+        Excellent</label
+      >
+      <label
+        ><input type="radio" formControlName="bookCondition" value="Good" />
+        Good</label
+      >
+      <label
+        ><input type="radio" formControlName="bookCondition" value="Fair" />
+        Fair</label
+      >
+    </div>
+
+    <label>Upload Photos</label>
+    <input type="file" (change)="onFileChange($event)" multiple />
+
+    <label>Quantity Available</label>
+    <input type="number" formControlName="quantity" min="1" />
+
+    <h3>Pricing Details:</h3>
+
+    <label>Your Price (₹)</label>
+    <input formControlName="price" type="number" placeholder="Enter price" />
+
+    <label>Shipping Charges</label>
+    <div class="checkbox-group">
+      <input formControlName="shippingCharge" type="number" />
+      <label
+        ><input type="checkbox" formControlName="freeShipping" /> Free
+        Shipping</label
+      >
+    </div>
+
+    <label>Preferred Payment Mode</label>
+    <div class="radio-group">
+      <label
+        ><input type="radio" formControlName="paymentMode" value="upi" />
+        UPI</label
+      >
+      <label
+        ><input type="radio" formControlName="paymentMode" value="bank" /> Bank
+        Account</label
+      >
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>

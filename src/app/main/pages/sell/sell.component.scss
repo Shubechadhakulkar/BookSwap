@@ -1,0 +1,77 @@
+/* src/app/main/pages/sell/sell.component.scss */
+
+.sell-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #f9f9f9;
+  min-height: 100vh;
+}
+
+.sell-form {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 0.25rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="file"],
+  input[type="radio"],
+  select,
+  button {
+    font-size: 1rem;
+  }
+
+  input,
+  select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+  }
+
+  input[type="radio"] {
+    width: auto;
+    margin-right: 0.4rem;
+  }
+
+  button {
+    padding: 0.7rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .radio-group,
+  .checkbox-group {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+}

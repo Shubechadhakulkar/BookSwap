@@ -1,1 +1,8 @@
-<p>buy works!</p>
+<h2>Books for Sale</h2>
+<div *ngIf="books.length; else noBooks">
+  <app-book-summary-card
+    *ngFor="let book of books"
+    [book]="book"
+  ></app-book-summary-card>
+</div>
+<ng-template #noBooks><p>No books listed yet.</p></ng-template>

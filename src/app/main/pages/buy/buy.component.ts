@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BookService } from 'src/app/shared/services/book.service'; 
 @Component({
   selector: 'app-buy',
   templateUrl: './buy.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BuyComponent implements OnInit {
 
-  constructor() { }
+ books: any[] = [];
 
-  ngOnInit(): void {
+  constructor(private bookService: BookService) {}
+
+  ngOnInit() {
+    this.books = this.bookService.getBooks();
   }
 
 }

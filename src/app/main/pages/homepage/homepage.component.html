@@ -1,1 +1,120 @@
-<p>homepage works!</p>
+<div class="choose-action-wrapper">
+  <div class="action-circle buy" routerLink="/buy">
+    <img src="assets/images/buy-icon.png" alt="Buy" />
+    <span>Buy Used Books</span>
+  </div>
+
+  <div class="or-text">OR</div>
+
+  <div class="action-circle sell" routerLink="/sell">
+    <img src="assets/images/sell-icon.png" alt="Sell" />
+    <span>Sell Old Books</span>
+  </div>
+</div>
+<div class="latest-products-section">
+  <h2 class="section-title">Latest Products</h2>
+
+  <div class="book-grid">
+    <app-cards
+      *ngFor="let book of books"
+      [categoryName]="book.title"
+      [imageUrl]="book.image"
+      [price]="book.price"
+      [redirectUrl]="book.link"
+    ></app-cards>
+  </div>
+</div>
+
+<section class="sell-guide-section">
+  <h2 class="sell-title">How to SELL your old books online on Clankart?</h2>
+  <p class="sell-subtitle">
+    Well, you can sell your old used books very easily on Clankart for actual
+    cash.
+  </p>
+
+  <div class="sell-steps-container">
+    <!-- Step 1 -->
+    <div class="sell-step-card">
+      <div class="step-label">Step 1</div>
+      <div class="step-image">
+        <img src="assets/step1.png" alt="Post Ad" />
+      </div>
+      <h3>Post an ad for selling used books</h3>
+      <p>
+        Post an ad on Clankart describing your book details to sell your old
+        books online.
+      </p>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <!-- Step 2 -->
+    <div class="sell-step-card">
+      <div class="step-label">Step 2</div>
+      <div class="step-image">
+        <img src="assets/step2.png" alt="Set Price" />
+      </div>
+      <h3>Set the selling price for your books</h3>
+      <p>Set the price for your books at which you want to sell them.</p>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <!-- Step 3 -->
+    <div class="sell-step-card">
+      <div class="step-label">Step 3</div>
+      <div class="step-image">
+        <img src="assets/step3.png" alt="Receive Money" />
+      </div>
+      <h3>Get paid into your UPI/Bank account</h3>
+      <p>
+        You will get money into your account once you receive an order for your
+        book.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="buy-guide-section">
+  <h2 class="buy-title">How to BUY used books online on book?</h2>
+  <p class="buy-subtitle">
+    Buying second-hand books on Clankart is fast, simple, and affordable.
+  </p>
+
+  <div class="buy-steps-container">
+    <!-- Step 1 -->
+    <div class="buy-step-card">
+      <div class="step-label">Step 1</div>
+      <div class="step-image">
+        <img src="assets/buy-step1.png" alt="Browse Books" />
+      </div>
+      <h3>Search for Books</h3>
+      <p>Use filters or search bar to find the used book you want to buy.</p>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <!-- Step 2 -->
+    <div class="buy-step-card">
+      <div class="step-label">Step 2</div>
+      <div class="step-image">
+        <img src="assets/buy-step2.png" alt="Place Order" />
+      </div>
+      <h3>Place Your Order</h3>
+      <p>Select the book and proceed with placing the order securely online.</p>
+    </div>
+
+    <div class="arrow">➜</div>
+
+    <!-- Step 3 -->
+    <div class="buy-step-card">
+      <div class="step-label">Step 3</div>
+      <div class="step-image">
+        <img src="assets/buy-step3.png" alt="Get Book" />
+      </div>
+      <h3>Receive Your Book</h3>
+      <p>
+        Your selected book will be delivered to your address safely and quickly.
+      </p>
+    </div>
+  </div>
+</section>
